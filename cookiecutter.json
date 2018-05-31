@@ -1,0 +1,12 @@
+{
+  "app_name": "persistence-homology",
+  "app_title": "Persistence Homology",
+  "short_description": "Materials Cloud App for persistence homology analysis of nanoporous materials.",
+  "github_user": "materialscloud-org",
+  "repo_name": "mc-{{ cookiecutter.app_name }}",
+  "contact_email": "",
+  "version": "0.1-alpha",
+  "author": "The Materials Cloud Team",
+  "aiida_min_version": "0.11",
+  "year": "2018"
+}
