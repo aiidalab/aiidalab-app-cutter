@@ -1,12 +1,12 @@
 {
-  "app_name": "persistence-homology",
-  "app_title": "Persistence Homology",
-  "short_description": "Materials Cloud App for persistence homology analysis of nanoporous materials.",
-  "github_user": "materialscloud-org",
-  "repo_name": "mc-{{ cookiecutter.app_name }}",
+  "app_name": "example-app",
+  "app_title": "Example App",
+  "short_description": "Example AiiDA Lab App used for the AiiDA Lab App Cookie cutter recipe.",
+  "github_user": "aiidalab",
+  "repo_name": "aiidalab-{{cookiecutter.app_name}}",
   "contact_email": "",
   "version": "0.1-alpha",
-  "author": "The Materials Cloud Team",
+  "author": "The AiiDA Lab Team",
   "aiida_min_version": "0.11",
-  "year": "2018"
+  "year": "2019"
 }
