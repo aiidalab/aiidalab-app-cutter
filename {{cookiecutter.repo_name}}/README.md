@@ -4,12 +4,12 @@
 
 ## Installation
 
-This jupyter-based app is intended to run in the 
+This jupyter-based app is intended to run in
 [AiiDA Lab](https://aiidalab.materialscloud.org)
-as well as inside the 
+as well as inside the
 [Quantum Mobile](https://materialscloud.org/work/quantum-mobile) Virtual Machine.
 
-Use the App Store in the [Home App](https://github.com/materialscloud-org/mc-home) to install it.
+Use the App Store in the Home App to install it.
 
 ## Usage
 
@@ -21,4 +21,4 @@ MIT
 
 ## Contact
 
-{{ cookiecutter.contact_email }}
+{{cookiecutter.contact_email}}
