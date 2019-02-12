@@ -6,7 +6,7 @@ template = """
   <th style="text-align:center">{{cookiecutter.app_title}}</th>
 <tr>
   <td valign="top"><ul>
-    <li><a href="{appbase}/example.ipynb" target="_blank">Example app</a></li>
+    <li><a href="{appbase}/example.ipynb" target="_blank">Example notebook</a></li>
   </ul></td>
 </tr>
 </table>

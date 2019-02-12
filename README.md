@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/aiidateam/aiidalab-app-cutter.svg?branch=master)](https://travis-ci.org/aiidateam/aiidalab-app-cutter)
+[![Build Status](https://travis-ci.org/aiidalab/aiidalab-app-cutter.svg?branch=master)](https://travis-ci.org/aiidalab/aiidalab-app-cutter)
 
 # AiiDA Lab App cutter
 
