@@ -1,12 +1,12 @@
 {
-  "app_name": "example-app",
-  "app_title": "Example App",
-  "short_description": "Example AiiDA Lab App used for the AiiDA Lab App Cookie cutter recipe.",
+  "app_name": "template",
+  "app_title": "Application template",
+  "short_description": "The default output of the AiiDA Lab application cutter.",
   "github_user": "aiidalab",
   "repo_name": "aiidalab-{{cookiecutter.app_name}}",
   "contact_email": "",
   "version": "0.1-alpha",
   "author": "The AiiDA Lab Team",
-  "aiida_min_version": "0.11",
+  "aiidalab_min_version": "19.1.2",
   "year": "2019"
 }

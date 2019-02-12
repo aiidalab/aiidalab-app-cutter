@@ -1,0 +1,1 @@
+aiidalab>={{cookiecutter.aiidalab_min_version}}
