@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/aiidateam/aiidalab-app-cutter.svg?branch=master)](https://travis-ci.org/aiidateam/aiidalab-app-cutter)
+
 # AiiDA Lab App cutter
 
 Cookie cutter recipe for Applications running on
@@ -6,7 +8,7 @@ Cookie cutter recipe for Applications running on
 ## Usage
 
     pip install cookiecutter
-    cookiecutter git@github.com:aiidalab/aiidalab-app-cutter.git
+    cookiecutter https://github.com/aiidalab/aiidalab-app-cutter.git
 
 This will produce the files and folder structure for your app,
 already adjusted according to your inputs.
