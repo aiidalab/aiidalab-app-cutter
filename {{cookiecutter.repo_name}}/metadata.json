@@ -1,6 +1,7 @@
 {
     "title": "{{cookiecutter.app_title}}",
     "description": "{{cookiecutter.short_description}}",
+    "version": "{{cookiecutter.version}}",
     "authors": "{{cookiecutter.author}}",
     "logo": "img/logo.png",
     "state": "development"

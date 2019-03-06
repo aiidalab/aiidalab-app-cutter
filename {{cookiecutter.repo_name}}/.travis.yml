@@ -11,7 +11,7 @@ addons:
   postgresql: "9.5"
 
 install:
-# Upgrade pip setuptools and wheel
+# Upgrade pip, setuptools, and wheel
 - pip install -U pip wheel setuptools
 - pip install -r requirements.txt
 

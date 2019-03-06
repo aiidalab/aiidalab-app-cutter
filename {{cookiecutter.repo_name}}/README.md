@@ -9,7 +9,7 @@ This jupyter-based app is intended to run in
 as well as inside the
 [Quantum Mobile](https://materialscloud.org/work/quantum-mobile) Virtual Machine.
 
-Use the App Store in the Home App to install it.
+Use the App Store to install it.
 
 ## Usage
 

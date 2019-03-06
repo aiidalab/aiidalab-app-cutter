@@ -1,7 +1,7 @@
+# -*- coding: utf-8 -*-
 """
-{{cookiecutter.app_name}}
+{{cookiecutter.app_title}}
+{{cookiecutter.repo_name}}
 
 {{cookiecutter.short_description}}
 """
-
-__version__ = "{{cookiecutter.version}}"
