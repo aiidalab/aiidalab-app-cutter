@@ -1,12 +1,26 @@
 ---
 language: python
 cache: pip
+python:
+- "2.7"
+
+env:
+  global:
+  - APP_DIR: aiidalab-template
 
 before_install:
-- pip install -U pip wheel setuptools
+- pip install -U wheel setuptools
+- pip install pip==18.1
 
 install:
-- pip install cookiecutter
+- pip install cookiecutter yapf prospector pre-commit
+- cookiecutter --no-input .
+- cd ${APP_DIR}
+- pip install -r requirements.txt
 
 script:
-- cookiecutter --no-input .
+- >
+  git init;
+  git add -A;
+  pre-commit install;
+  pre-commit run --all-files || ( git status --short ; git diff ; exit 1 );
