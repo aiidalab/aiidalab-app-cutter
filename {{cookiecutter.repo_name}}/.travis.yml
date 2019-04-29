@@ -13,7 +13,7 @@ addons:
 install:
 # Upgrade pip setuptools and wheel
 - pip install -U pip wheel setuptools
-- pip install --no-use-pep517 .[precommit,testing]
+- pip install -r requirements.txt
 
 env:
 - TEST_AIIDA_BACKEND=django
