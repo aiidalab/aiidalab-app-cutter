@@ -7,6 +7,6 @@
   "contact_email": "",
   "version": "0.1-alpha",
   "author": "The AiiDA lab Team",
-  "aiidalab_min_version": "19.3.0",
-  "year": "2019"
+  "aiidalab_min_version": "20.02.0b2",
+  "year": "2020"
 }
