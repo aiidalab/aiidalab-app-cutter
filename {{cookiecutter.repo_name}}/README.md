@@ -5,7 +5,7 @@
 ## Installation
 
 This jupyter-based app is intended to run in
-[AiiDA lab](https://aiidalab.materialscloud.org)
+[AiiDA lab](https://www.materialscloud.org/aiidalab)
 as well as inside the
 [Quantum Mobile](https://materialscloud.org/work/quantum-mobile) Virtual Machine.
 
