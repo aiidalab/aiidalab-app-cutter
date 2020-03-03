@@ -3,7 +3,7 @@
 # AiiDA lab App Cutter
 
 Cookie cutter recipe for Applications running on
-[AiiDA lab](http://aiidalab.materialscloud.org).
+[AiiDA lab](https://www.materialscloud.org/aiidalab)
 
 ## Usage
 
