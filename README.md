@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.org/aiidalab/aiidalab-app-cutter.svg?branch=master)](https://travis-ci.org/aiidalab/aiidalab-app-cutter)
 
-# AiiDA Lab App cutter
+# AiiDA lab App Cutter
 
 Cookie cutter recipe for Applications running on
-[AiiDA Lab](http://aiidalab.materialscloud.org).
+[AiiDA lab](https://www.materialscloud.org/aiidalab)
 
 ## Usage
 
