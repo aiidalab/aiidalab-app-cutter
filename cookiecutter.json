@@ -8,5 +8,8 @@
   "version": "0.1-alpha",
   "author": "The AiiDAlab Team",
   "aiidalab_min_version": "20.02.0b2",
-  "year": "2020"
+  "year": "2020",
+  "_copy_without_render": [
+    ".github/workflows/ci.yml"
+  ]
 }
