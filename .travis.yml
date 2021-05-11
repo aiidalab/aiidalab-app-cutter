@@ -12,7 +12,7 @@ before_install:
 - pip install -U wheel setuptools
 
 install:
-- pip install cookiecutter yapf prospector pre-commit
+- pip install cookiecutter pre-commit
 - cookiecutter --no-input .
 - cd ${APP_DIR}
 - pip install -r requirements.txt
