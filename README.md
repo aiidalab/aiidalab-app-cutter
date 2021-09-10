@@ -5,6 +5,8 @@
 Cookie cutter recipe for Applications running on
 [AiiDAlab](https://www.materialscloud.org/aiidalab)
 
+See the [`aiidalab-hello-world` app](https://github.com/aiidalab/aiidalab-hello-world) for the files and folders created by this recipe.
+
 ## Usage
 
     pip install cookiecutter
