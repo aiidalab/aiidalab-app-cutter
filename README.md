@@ -1,9 +1,11 @@
 [![Build Status](https://travis-ci.org/aiidalab/aiidalab-app-cutter.svg?branch=master)](https://travis-ci.org/aiidalab/aiidalab-app-cutter)
 
-# AiiDA lab App Cutter
+# AiiDAlab App Cutter
 
 Cookie cutter recipe for Applications running on
-[AiiDA lab](https://www.materialscloud.org/aiidalab)
+[AiiDAlab](https://www.materialscloud.org/aiidalab)
+
+See the [`aiidalab-hello-world` app](https://github.com/aiidalab/aiidalab-hello-world) for the files and folders created by this recipe.
 
 ## Usage
 
@@ -12,6 +14,10 @@ Cookie cutter recipe for Applications running on
 
 This will produce the files and folder structure for your app,
 already adjusted according to your inputs.
+
+## Documentation
+
+See the [AiiDAlab documentation](https://aiidalab.readthedocs.io) on app development.
 
 ## License
 

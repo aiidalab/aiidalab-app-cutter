@@ -1,7 +1,7 @@
 {
   "app_name": "template",
   "app_title": "Application template",
-  "short_description": "The default output of the AiiDA lab application cutter.",
+  "short_description": "The default output of the AiiDAlab application cutter.",
   "github_user": "aiidalab",
   "repo_name": "aiidalab-{{cookiecutter.app_name}}",
   "contact_email": "",
