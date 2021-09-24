@@ -25,5 +25,6 @@ You have now taken the first step in creating your new AiiDAlab App:
 
 4. Register your app NOW by making a pull request to the AiiDAlab App Registry
 on https://github.com/aiidalab/aiidalab-registry
-See this link also for a full list of keys for your metadata.json file.
+
+See this link also for a full list of recognized metadata keys for the setup.cfg file.
 """)
