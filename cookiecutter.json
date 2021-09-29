@@ -1,15 +1,18 @@
 {
-  "app_name": "template",
-  "app_title": "Application template",
-  "short_description": "The default output of the AiiDAlab application cutter.",
-  "github_user": "aiidalab",
-  "repo_name": "aiidalab-{{cookiecutter.app_name}}",
+  "app_name": "my-app",
+  "app_title": "My App",
+  "short_description": "This AiiDAlab application was created with the app cutter.",
+  "github_username": "aiidalab",
+  "repo_name": "aiidalab-{{ cookiecutter.app_name.lower().replace(' ', '-').replace('_', '-')}}",
   "contact_email": "",
   "version": "0.1-alpha",
   "author": "The AiiDAlab Team",
-  "aiidalab_min_version": "20.02.0b2",
-  "year": "2020",
+  "aiidalab_min_version": "21.09.0",
+  "logo_url": "https://raw.githubusercontent.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/master/img/logo.png",
+  "documentation_url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/#readme",
+  "issue_tracker_url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/issues",
   "_copy_without_render": [
     ".github/workflows/ci.yml"
-  ]
+  ],
+  "year": "2021"
 }

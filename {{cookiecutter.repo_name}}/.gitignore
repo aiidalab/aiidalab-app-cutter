@@ -1,9 +1,10 @@
-*.pyc
+*.egg*
 *.swo
 *.swp
-~*
 *~
-*.egg*
+.*.ipynb
 .DS_Store
-
+.ipynb_checkpoints/*
 .vscode
+__pycache__/
+~*
