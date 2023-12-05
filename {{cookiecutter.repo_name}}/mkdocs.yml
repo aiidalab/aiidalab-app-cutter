@@ -1,0 +1,9 @@
+site_name: Pseudopotential optimization
+nav:
+  - Home: index.md
+  - Tutorial: tutorial.md
+  - Development: development.md
+theme:
+  name: material
+markdown_extensions:
+  - footnotes
