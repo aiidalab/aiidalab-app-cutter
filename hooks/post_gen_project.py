@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+"""Post-generate hook to be run after project generation."""
 
 print(
     """
@@ -31,6 +31,11 @@ You have now taken the first step in creating your new AiiDAlab App:
 5. Register your app NOW by following the instructions here:
 
    https://aiidalab.readthedocs.io/en/latest/app_development/publish.html
+
+6. Import your repository to readthedocs.org to automatically build and publish your documentation, with the following instructions:
+
+    https://readthedocs.org/dashboard/import/ for the import of your repository.
+    https://docs.readthedocs.io/en/stable/pull-requests.html for the configuration of pull request previews.
 
 """
 )
