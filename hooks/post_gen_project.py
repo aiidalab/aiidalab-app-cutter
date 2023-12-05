@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+"""Post-generate hook to be run after project generation."""
 
 print(
     """

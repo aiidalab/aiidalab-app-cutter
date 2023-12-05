@@ -1,0 +1,19 @@
+target-version = "py39"
+
+[lint]
+extend-select = [
+  "UP",  # pyupgrade
+  "D",   # pydocstyle
+]
+
+ignore = [
+    "UP009",
+    "D205",
+    "D212",
+    "D415",
+    "D100",
+    "D103",
+]
+
+[lint.pydocstyle]
+convention = "google"
