@@ -1,13 +1,21 @@
-[![Build Status](https://travis-ci.org/aiidalab/aiidalab-app-cutter.svg?branch=master)](https://travis-ci.org/aiidalab/aiidalab-app-cutter)
-
 # AiiDAlab App Cutter
 
 Cookie cutter recipe for Applications running on
-[AiiDAlab](https://www.materialscloud.org/aiidalab)
+[AiiDAlab](https://aiidalab.net)
 
 See the [`aiidalab-hello-world` app](https://github.com/aiidalab/aiidalab-hello-world) for the files and folders created by this recipe.
 
 ## Usage
+
+With uv
+
+    uvx cookiecutter https://github.com/aiidalab/aiidalab-app-cutter.git
+
+With pipx
+
+    pipx run cookiecutter https://github.com/aiidalab/aiidalab-app-cutter.git
+
+With pip
 
     pip install cookiecutter
     cookiecutter https://github.com/aiidalab/aiidalab-app-cutter.git
