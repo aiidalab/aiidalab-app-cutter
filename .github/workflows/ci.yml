@@ -34,3 +34,8 @@ jobs:
 
             - name: Run cookiecutter
               run: uvx cookiecutter --no-input .
+
+            - name: Run pre-commit hooks on generated app
+              run: |
+                cd aiidalab-my-app
+                uvx pre-commit run --all-files --show-diff-on-failure
