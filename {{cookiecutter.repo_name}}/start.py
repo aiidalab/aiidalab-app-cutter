@@ -1,4 +1,5 @@
 import ipywidgets as ipw
+
 template = """
 <table>
 <tr>
