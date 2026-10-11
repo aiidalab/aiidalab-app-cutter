@@ -4,7 +4,7 @@
   "short_description": "This AiiDAlab application was created with the app cutter.",
   "github_username": "aiidalab",
   "repo_name": "aiidalab-{{ cookiecutter.app_name.lower().replace(' ', '-').replace('_', '-')}}",
-  "contact_email": "",
+  "contact_email": "name@example.com",
   "version": "0.1-alpha",
   "author": "The AiiDAlab Team",
   "aiidalab_min_version": "21.09.0",

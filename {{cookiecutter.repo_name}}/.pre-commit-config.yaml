@@ -1,12 +1,25 @@
 repos:
-  - repo: https://github.com/psf/black
-    rev: 20.8b1
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
     hooks:
-      - id: black
-        language_version: python3 # Should be a command that runs python3.6+
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+      - id: check-added-large-files
+        args: ['--maxkb=500', '--enforce-all']
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: check-yaml
+      - id: check-toml
 
-  - repo: https://gitlab.com/pycqa/flake8
-    rev: '3.8.4'
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.0
     hooks:
-    - id: flake8
-      args: [--count, --show-source, --statistics]
+    - id: ruff-check
+      args: [--fix, --show-fixes, --exit-non-zero-on-fix]
+    - id: ruff-format
+
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.8.2
+    hooks:
+    - id: nbstripout
