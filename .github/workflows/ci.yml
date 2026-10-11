@@ -1,0 +1,36 @@
+---
+name: CI
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+
+env:
+    FORCE_COLOR: "1"
+
+jobs:
+
+    test-cookiecutter:
+
+        runs-on: ubuntu-latest
+        timeout-minutes: 30
+        strategy:
+            matrix:
+                python-version: ['3.10', '3.15']
+            fail-fast: false
+
+
+        steps:
+
+            - uses: actions/checkout@v7
+
+            - name: Set up uv
+              uses: astral-sh/setup-uv@v10.3.0
+              with:
+                  python-version: ${{ matrix.python-version }}
+                  activate-environment: true
+
+            - name: Run cookiecutter
+              run: uvx cookiecutter --no-input .
