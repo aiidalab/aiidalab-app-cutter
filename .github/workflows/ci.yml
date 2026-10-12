@@ -40,3 +40,7 @@ jobs:
                 # Need to do this, pre-commit/prek otherwise skips untracked files
                 cd aiidalab-my-app && git add -A && cd ..
                 uvx prek run --all-files --show-diff-on-failure
+
+            - name: Parse app metadata
+              run: |
+                uvx aiidalab registry parse-app-repo aiidalab-my-app/
