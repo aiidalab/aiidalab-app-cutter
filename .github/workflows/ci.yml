@@ -37,7 +37,6 @@ jobs:
 
             - name: Run pre-commit hooks on generated app
               run: |
-                cd aiidalab-my-app
-                # Need to do this, pre-commit otherwise skips untracked files
-                git add -A
-                uvx pre-commit run --all-files --show-diff-on-failure
+                # Need to do this, pre-commit/prek otherwise skips untracked files
+                cd aiidalab-my-app && git add -A && cd ..
+                uvx prek run --all-files --show-diff-on-failure
