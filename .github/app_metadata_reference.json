@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "title": "My App",
+    "description": "This AiiDAlab application was created with the app cutter.",
+    "authors": "The AiiDAlab Team",
+    "state": "registered",
+    "documentation_url": "https://github.com/aiidalab/aiidalab-my-app/#readme",
+    "external_url": "https://github.com/aiidalab/aiidalab-my-app",
+    "logo": "https://raw.githubusercontent.com/aiidalab/aiidalab-my-app/main/img/logo.png",
+    "categories": [],
+    "version": "0.1-alpha",
+    "citations": []
+  },
+  "environment": {
+    "python_requirements": [
+      "aiidalab-widgets-base~=3.0.0",
+      "ipywidgets~=8.1"
+    ]
+  }
+}

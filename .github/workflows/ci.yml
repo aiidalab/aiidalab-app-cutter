@@ -43,4 +43,5 @@ jobs:
 
             - name: Parse app metadata
               run: |
-                uvx aiidalab registry parse-app-repo aiidalab-my-app/
+                uvx aiidalab registry parse-app-repo aiidalab-my-app/ > app_metadata.json
+                diff app_metadata.json .github/app_metadata_reference.json
