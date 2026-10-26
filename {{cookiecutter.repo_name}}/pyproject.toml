@@ -2,7 +2,7 @@
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tools.aiidalab]
+[tool.aiidalab]
 title = "{{cookiecutter.app_title}}"
 
 # The "dev" dependency group is automatically synced by uv
