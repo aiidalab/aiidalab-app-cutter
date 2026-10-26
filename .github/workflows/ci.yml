@@ -30,7 +30,6 @@ jobs:
               uses: astral-sh/setup-uv@v10.3.2
               with:
                   python-version: ${{ matrix.python-version }}
-                  activate-environment: true
 
             - name: Run cookiecutter
               run: uvx cookiecutter --no-input .
