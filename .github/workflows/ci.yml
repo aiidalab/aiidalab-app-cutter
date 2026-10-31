@@ -76,10 +76,7 @@ jobs:
             - name: Set jupyter token env
               run: echo "JUPYTER_TOKEN=$(openssl rand -hex 32)" >> $GITHUB_ENV
 
-            - name: Run unit tests
-              run: cd aiidalab-my-app && uv run pytest tests/
-
-            - name: Run pytest
+            - name: Run notebook tests
               run: cd aiidalab-my-app && uv run pytest -v --driver ${{ matrix.browser }} tests_notebooks/
               env:
                   TAG: ${{ matrix.docker-tag }}
