@@ -12,6 +12,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 APP_NAME = "{{cookiecutter.repo_name}}"
 
+
 def is_responsive(url):
     try:
         response = requests.get(url)
