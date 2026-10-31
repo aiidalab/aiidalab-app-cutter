@@ -86,5 +86,5 @@ jobs:
               uses: actions/upload-artifact@v7
               with:
                   name: Screenshots-${{ matrix.docker-tag }}-${{ matrix.browser }}
-                  path: screenshots/
+                  path: aiidalab-my-app/screenshots/
                   if-no-files-found: error

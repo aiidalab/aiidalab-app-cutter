@@ -5,10 +5,11 @@ from urllib.parse import urljoin
 
 import pytest
 import requests
-import selenium.webdriver.support.expected_conditions as ec
 from requests.exceptions import ConnectionError
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
+
+# import selenium.webdriver.support.expected_conditions as ec
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.support.wait import WebDriverWait
 
 APP_NAME = "{{cookiecutter.repo_name}}"
 
