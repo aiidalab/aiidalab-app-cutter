@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-def test_example(selenium_driver):
+def test_example(selenium_driver, final_screenshot):
     selenium = selenium_driver("apps/apps/app/notebooks/example.ipynb")
     selenium.find_element(By.ID, "ipython-main-app")
     selenium.find_element(By.ID, "notebook-container")
