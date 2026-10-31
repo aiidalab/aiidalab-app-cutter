@@ -5,11 +5,10 @@ from urllib.parse import urljoin
 
 import pytest
 import requests
+import selenium.webdriver.support.expected_conditions as ec
 from requests.exceptions import ConnectionError
-
-# import selenium.webdriver.support.expected_conditions as ec
-# from selenium.webdriver.common.by import By
-# from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
 
 APP_NAME = "{{cookiecutter.repo_name}}"
 
@@ -106,15 +105,15 @@ def selenium_driver(selenium, notebook_service):
         window_height = 600
         selenium.set_window_size(window_width, window_height)
 
-        # selenium.find_element(By.ID, "ipython-main-app")
-        # selenium.find_element(By.ID, "notebook-container")
-        # selenium.find_element(By.ID, "appmode-busy")
+        selenium.find_element(By.ID, "ipython-main-app")
+        selenium.find_element(By.ID, "notebook-container")
+        selenium.find_element(By.ID, "appmode-busy")
         # We wait until the appmode spinner disappears. However,
         # this does not seem to be fully robust, as the spinner might flash
         # while the page is still loading. So we add explicit sleep here as well.
-        # WebDriverWait(selenium, 240).until(
-        #     ec.invisibility_of_element((By.ID, "appmode-busy"))
-        # )
+        WebDriverWait(selenium, 240).until(
+            ec.invisibility_of_element((By.ID, "appmode-busy"))
+        )
         sleep(5)
 
         return selenium
