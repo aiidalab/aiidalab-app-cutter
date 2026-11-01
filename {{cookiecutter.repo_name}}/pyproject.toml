@@ -11,7 +11,10 @@ title = "{{cookiecutter.app_title}}"
 # `pip install -e . --group dev`
 [dependency-groups]
 dev = [
-  "pytest"
+  "pytest~=9.2",
+  "pytest-docker==3.2.4",
+  "pytest-selenium~=4.1.0",
+  "selenium~=4.52.0",
 ]
 
 [project]
