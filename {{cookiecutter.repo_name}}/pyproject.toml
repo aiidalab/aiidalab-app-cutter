@@ -1,10 +1,53 @@
 [build-system]
-requires = [
-    "setuptools>=64.0.0",
-    "wheel"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.aiidalab]
+title = "{{cookiecutter.app_title}}"
+
+# The "dev" dependency group is automatically synced by uv
+# and should thus contain all necessary deps for local development.
+# To install with pip run:
+# `pip install -e . --group dev`
+[dependency-groups]
+dev = [
+  "pytest"
 ]
-build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{cookiecutter.repo_name}}"
+version = "{{cookiecutter.version}}"
+authors = [{name = "{{cookiecutter.author}}", email = "{{cookiecutter.contact_email}}"}]
+description = "{{cookiecutter.short_description}}"
+
+requires-python = ">=3.12"
+dependencies = [
+    "aiidalab-widgets-base~=3.0.0",
+    "ipywidgets~=8.1"
+]
+
+readme = "README.md"
+license = 'MIT'
+license-files = ['LICENSE']
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Development Status :: 1 - Planning",
+    "Topic :: Scientific/Engineering",
+    "Framework :: AiiDA",
+]
+
+
+[project.urls]
+homepage = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}"
+{%- if cookiecutter.logo_url %}
+logo = "{{cookiecutter.logo_url}}"
+{%- endif %}
+{%- if cookiecutter.documentation_url %}
+documentation = "{{cookiecutter.documentation_url}}"
+{%- endif %}
+{%- if cookiecutter.issue_tracker_url %}
+issues = "{{cookiecutter.issue_tracker_url}}"
+{%- endif %}
 
 [tool.ruff]
 line-length = 88
-target-version = "py39"
