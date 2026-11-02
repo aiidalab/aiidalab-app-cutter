@@ -87,7 +87,7 @@ def notebook_service(docker_ip, docker_services, aiidalab_exec, nb_user):
 def browser_context_args(browser_context_args):
     return {
         **browser_context_args,
-        "viewport": {"width": 800, "height": 600},
+        "viewport": {"width": 800, "height": 800},
     }
 
 
