@@ -1,8 +1,8 @@
-from selenium.webdriver.common.by import By
+from playwright.sync_api import expect
 
 
-def test_example(selenium_driver, final_screenshot):
-    selenium = selenium_driver("notebooks/example.ipynb")
-    selenium.find_element(By.ID, "ipython-main-app")
-    selenium.find_element(By.ID, "notebook-container")
-    selenium.find_element(By.CLASS_NAME, "jupyter-widgets-view")
+def test_example(notebook_page, final_screenshot):
+    page = notebook_page("notebooks/example.ipynb")
+    expect(page.locator("#ipython-main-app")).to_be_attached()
+    expect(page.locator("#notebook-container")).to_be_attached()
+    expect(page.locator(".jupyter-widgets-view").first).to_be_visible()

@@ -1,16 +1,17 @@
 import os
 from pathlib import Path
-from time import sleep
 from urllib.parse import urljoin
 
 import pytest
 import requests
-import selenium.webdriver.support.expected_conditions as ec
+from playwright.sync_api import expect
 from requests.exceptions import ConnectionError
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
 
 APP_NAME = "{{cookiecutter.repo_name}}"
+
+# By default, let Playwright assertions retry for 90s
+# till a given element is loaded.
+expect.set_options(timeout=90_000)
 
 
 def is_responsive(url):
@@ -82,47 +83,50 @@ def notebook_service(docker_ip, docker_services, aiidalab_exec, nb_user):
     return url, token
 
 
+@pytest.fixture(scope="session")
+def browser_context_args(browser_context_args):
+    return {
+        **browser_context_args,
+        "viewport": {"width": 800, "height": 600},
+    }
+
+
 @pytest.fixture(scope="function")
-def selenium_driver(selenium, notebook_service):
+def notebook_page(page, notebook_service):
     """This is the main fixture to be used in tests.
 
     We're already guaranteed that the container is up and responding to HTTP requests.
     (via `notebook_service` fixture).
     """
 
-    def _selenium_driver(nb_path, url_params=None):
+    def _notebook_page(nb_path, url_params=None):
         url, token = notebook_service
         url_with_token = urljoin(url, f"apps/apps/{APP_NAME}/{nb_path}?token={token}")
         if url_params is not None:
             for key, value in url_params.items():
                 url_with_token += f"&{key}={value}"
-        selenium.get(f"{url_with_token}")
-        # By default, let's allow selenium functions to retry for 60s
-        # till a given element is loaded, see:
-        # https://selenium-python.readthedocs.io/waits.html#implicit-waits
-        selenium.implicitly_wait(90)
-        window_width = 800
-        window_height = 600
-        selenium.set_window_size(window_width, window_height)
+        # By default, let's allow Playwright actions to wait for 90s
+        # till a given element is loaded.
+        page.set_default_timeout(90_000)
+        page.goto(url_with_token)
 
-        selenium.find_element(By.ID, "ipython-main-app")
-        selenium.find_element(By.ID, "notebook-container")
-        selenium.find_element(By.ID, "appmode-busy")
+        page.locator("#ipython-main-app").wait_for(state="attached")
+        page.locator("#notebook-container").wait_for(state="attached")
+        appmode_busy = page.locator("#appmode-busy")
+        appmode_busy.wait_for(state="attached")
         # We wait until the appmode spinner disappears. However,
         # this does not seem to be fully robust, as the spinner might flash
-        # while the page is still loading. So we add explicit sleep here as well.
-        WebDriverWait(selenium, 240).until(
-            ec.invisibility_of_element((By.ID, "appmode-busy"))
-        )
-        sleep(5)
+        # while the page is still loading. So we add explicit wait here as well.
+        appmode_busy.wait_for(state="hidden", timeout=240_000)
+        page.wait_for_timeout(5_000)
 
-        return selenium
+        return page
 
-    return _selenium_driver
+    return _notebook_page
 
 
 @pytest.fixture
-def final_screenshot(request, screenshot_dir, selenium):
+def final_screenshot(request, screenshot_dir, page):
     """Take screenshot at the end of the test.
 
     Screenshot name is generated from the test function name
@@ -131,16 +135,4 @@ def final_screenshot(request, screenshot_dir, selenium):
     screenshot_name = f"{request.function.__name__[5:]}.png"
     screenshot_path = Path.joinpath(screenshot_dir, screenshot_name)
     yield
-    selenium.get_screenshot_as_file(screenshot_path)
-
-
-@pytest.fixture
-def firefox_options(firefox_options):
-    firefox_options.add_argument("--headless")
-    return firefox_options
-
-
-@pytest.fixture
-def chrome_options(chrome_options):
-    chrome_options.add_argument("--headless")
-    return chrome_options
+    page.screenshot(path=screenshot_path)
