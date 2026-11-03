@@ -12,7 +12,7 @@ aiidalab install {{cookiecutter.app_name}}
 ```
 Otherwise, you can also install it directly from the repository:
 ```
-aiidalab install {{cookiecutter.app_name}}@https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}
+aiidalab install {{cookiecutter.app_name}}@git+https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}
 ```
 
 ## Usage

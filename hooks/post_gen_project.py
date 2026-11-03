@@ -18,7 +18,7 @@ You have now taken the first step in creating your new AiiDAlab App:
 
 3. Enable code sanity checks on every commit (recommended):
 
-    pip install -U pre-commit
+    uv tool install pre-commit
     pre-commit install
 
 4. Upload your app repository online, e.g., to GitHub (https://docs.github.com/en/get-started/quickstart/create-a-repo):
